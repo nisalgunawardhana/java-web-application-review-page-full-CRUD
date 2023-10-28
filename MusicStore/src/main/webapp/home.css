@@ -1,0 +1,374 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Add this CSS to your existing styles.css */
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+/* Logo */
+.logo {
+    padding: 10px;
+}
+
+.logo img {
+    height: 50px; /* Adjust the height as needed */
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+nav a:hover {
+    color: #1db954; /* Change the text color to green on hover */
+}
+
+/* User Actions */
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+/* Add this CSS to your existing styles.css */
+
+.login-signup-button {
+    background-color: #1db954;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove the default underline from links */
+}
+
+.login-signup-button i {
+    margin-right: 5px; /* Adjust the spacing as needed */
+}
+.login-signup-button:hover {
+    background-color: #15763e; /* Change the background color on hover */
+}
+
+/* Add this CSS to your existing styles.css */
+
+.cart-button {
+    background-color: #1db954;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove the default underline from links */
+}
+
+.cart-button i {
+    margin-right: 5px; /* Adjust the spacing as needed */
+}
+.cart-button:hover {
+    background-color: #000000; /* Change the background color on hover */
+}
+
+
+
+footer {
+    background-color: #333;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+
+/* Slideshow */
+.slideshow-container {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Add this CSS to your existing styles.css */
+
+/* Shop Banners Container */
+.shop-banners {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+/* Shop Banner */
+.shop-banner {
+    flex: 0 0 48%;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shop-banner img {
+    max-width: 100%;
+    height: auto;
+    
+}
+
+/* Shop Buttons */
+.shop-button {
+    background-color: #1db954;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.shop-button:hover {
+    background-color: #000;
+}
+
+@media (max-width: 768px) {
+    .slideshow-container {
+        max-width: 100%;
+    }
+
+    .slide img {
+        width: 100%;
+        height: auto;
+    }
+
+    .shop-banners {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .shop-banner {
+        flex: 0 0 100%; /* Full width on smaller screens */
+        margin: 10px 0;
+    }
+}
+
+
+/* Mobile Navigation Button */
+.mobile-nav-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+.mobile-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    right: -200px; /* Initially hidden off the screen */
+    width: 200px;
+    height: 100%;
+    overflow-y: auto;
+    transition: right 0.3s ease-in-out;
+    z-index: 2;
+}
+
+
+
+/* Style the "Login/Signup" and "Cart" buttons in the mobile menu */
+.mobile-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+
+
+.mobile-menu li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s; /* Add a smooth transition effect for the color change */
+}
+
+/* Add a hover effect to change the color to green */
+.mobile-menu a:hover {
+    color: #1db954; /* Change the text color to green on hover */
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Media Query to show the mobile menu at a certain breakpoint */
+@media (max-width: 768px) {
+    .mobile-nav-button {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .mobile-menu.open {
+        right: 0;
+    }
+
+    /* Hide the header menu on smaller screens */
+    nav ul {
+        display: none;
+    }
+
+    nav ul, .login-signup-button, .cart-button {
+        display: none;
+    }
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.review-images {
+    flex: 1;
+}
+
+.review-images img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visit-button {
+    flex: 1;
+    text-align: center;
+}
+
+.visit-button button {
+    padding: 10px 20px;
+    background-color: #0077b6; /* Change this to your desired button color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.visit-button button:hover {
+    background-color: #005b95; /* Change this to the button hover color */
+}
+
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 10vh;
+  width:100%;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#search-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+

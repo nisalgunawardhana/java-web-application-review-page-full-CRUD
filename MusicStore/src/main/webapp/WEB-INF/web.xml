@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    
+         
+    <servlet>
+    	<servlet-name>ReviewServlet</servlet-name>
+    	<servlet-class>com.musicstore.ReviewServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>ReviewServlet</servlet-name>
+    	<url-pattern>/insertReview</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Mapping for the RetrieveReviewsServlet -->
+    <servlet>
+        <servlet-name>ReReviewsServlet</servlet-name>
+        <servlet-class>com.musicstore.ReReviewsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReReviewsServlet</servlet-name>
+        <url-pattern>/retrieveReviews</url-pattern>
+    </servlet-mapping>
+
+   <!--  for updating reviews -->
+    <servlet>
+        <servlet-name>UpdateServlet</servlet-name>
+        <servlet-class>com.musicstore.UpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateServlet</servlet-name>
+        <url-pattern>/updateReview</url-pattern>
+    </servlet-mapping>
+    
+    <!--  for deleting reviews -->
+    <servlet>
+        <servlet-name>DeleteReviewServlet</servlet-name>
+        <servlet-class>com.musicstore.DeleteReviewServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteReviewServlet</servlet-name>
+        <url-pattern>/deleteReview</url-pattern>
+    </servlet-mapping>
+
+    
+    
+    </web-app>
